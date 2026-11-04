@@ -1,0 +1,66 @@
+NumPy 2.4.4 | pandas 3.0.2 | seaborn 0.13.2
+mean: 49.71 std: 9.89
+percentiles 25/50/75: [43.04 50.06 55.9 ]
+matrix:
+ [[2 6 4]
+ [4 7 4]
+ [5 4 3]]
+determinant: -18.0
+column means: [3.66666667 5.66666667 3.66666667]
+z-score mean ~0: -0.0 std ~1: 1.0
+shape: (569, 32)
+missing values: 0
+duplicates: 0
+diagnosis
+benign       357
+malignant    212
+Name: count, dtype: int64
+       mean radius  mean texture  mean area
+count       569.00        569.00     569.00
+mean         14.13         19.29     654.89
+std           3.52          4.30     351.91
+min           6.98          9.71     143.50
+25%          11.70         16.17     420.30
+50%          13.37         18.84     551.10
+75%          15.78         21.80     782.70
+max          28.11         39.28    2501.00
+          mean radius         mean texture  ... mean area mean smoothness       
+                 mean  median         mean  ...    median            mean median
+diagnosis                                   ...                                 
+benign         12.147  12.200       17.915  ...     458.4           0.092  0.091
+malignant      17.463  17.325       21.605  ...     932.0           0.103  0.102
+
+[2 rows x 8 columns]
+diagnosis  benign  malignant
+size_band                   
+small       0.969      0.031
+medium      0.793      0.207
+large       0.121      0.879
+saved 4 figures
+Welch t-test on mean radius: t = 22.21, p = 1.684e-64
+Pearson r (radius vs area) = 0.987, p = 0.00e+00
+train: (455, 30) test: (114, 30)
+              Model  CV accuracy  Test accuracy  Precision  Recall     F1
+Logistic Regression       0.9802         0.9825     0.9861  0.9861 0.9861
+      Random Forest       0.9604         0.9561     0.9589  0.9722 0.9655
+Best model: Logistic Regression
+              precision    recall  f1-score   support
+
+   malignant       0.98      0.98      0.98        42
+      benign       0.99      0.99      0.99        72
+
+    accuracy                           0.98       114
+   macro avg       0.98      0.98      0.98       114
+weighted avg       0.98      0.98      0.98       114
+
+worst perimeter         0.1331
+worst area              0.1281
+worst concave points    0.1081
+mean concave points     0.0944
+worst radius            0.0906
+mean radius             0.0587
+mean perimeter          0.0552
+mean area               0.0499
+mean concavity          0.0462
+worst concavity         0.0354
+dtype: float64
