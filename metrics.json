@@ -1,0 +1,106 @@
+{
+ "raw_rows": 7030,
+ "dups": 30,
+ "missing_total": 55,
+ "missing_monthly": 35,
+ "clean_rows": 7000,
+ "churn_rate": 38.32857142857143,
+ "churn_contract": {
+  "Month-to-month": 55.3,
+  "One year": 25.6,
+  "Two year": 8.2
+ },
+ "churn_internet": {
+  "DSL": 28.4,
+  "Fiber": 51.5,
+  "None": 29.1
+ },
+ "churn_tech": {
+  "No": 43.1,
+  "No internet": 29.1,
+  "Yes": 36.6
+ },
+ "churn_new": {
+  "0": 34.8,
+  "1": 62.5
+ },
+ "churn_calls": {
+  "0": 36.5,
+  "1": 49.3
+ },
+ "churn_pay": {
+  "Cash/Cheque": 43.5,
+  "Credit card": 37.2,
+  "Net banking": 36.7,
+  "UPI": 37.5
+ },
+ "models": {
+  "Logistic Regression": {
+   "cv_auc": 0.8226274009780031,
+   "auc": 0.8250505173278233,
+   "accuracy": 0.7405714285714285,
+   "precision": 0.6337854500616523,
+   "recall": 0.7660208643815202,
+   "f1": 0.6936572199730094
+  },
+  "Random Forest": {
+   "cv_auc": 0.8130549986560688,
+   "auc": 0.819935940022845,
+   "accuracy": 0.7302857142857143,
+   "precision": 0.6191616766467066,
+   "recall": 0.7704918032786885,
+   "f1": 0.6865869853917662
+  },
+  "Gradient Boosting": {
+   "cv_auc": 0.8159550137431655,
+   "auc": 0.8164249339441912,
+   "accuracy": 0.7337142857142858,
+   "precision": 0.6257668711656442,
+   "recall": 0.7600596125186289,
+   "f1": 0.6864064602960969
+  }
+ },
+ "best": "Logistic Regression",
+ "best_threshold": 0.7,
+ "max_profit": 248099.99999999988,
+ "profit_at_050": 171300.0,
+ "cm": {
+  "tn": 966,
+  "fp": 113,
+  "fn": 323,
+  "tp": 348
+ },
+ "final": {
+  "accuracy": 0.7508571428571429,
+  "precision": 0.754880694143167,
+  "recall": 0.518628912071535,
+  "f1": 0.6148409893992933
+ },
+ "n_test": 1750,
+ "test_churners": 671,
+ "assumptions": {
+  "value": 9000,
+  "cost": 1500,
+  "save": 0.3
+ },
+ "profit_no_model": 0.0,
+ "profit_target_all": -813300.0000000002,
+ "importance": {
+  "contract": 0.1707,
+  "tenure_months": 0.0794,
+  "internet_service": 0.0527,
+  "support_calls": 0.0159,
+  "total_charges": 0.0044,
+  "online_security": 0.0039,
+  "tech_support": 0.0034,
+  "streaming": 0.0031
+ },
+ "fn_contract": {
+  "Month-to-month": 201,
+  "One year": 84,
+  "Two year": 38
+ },
+ "fn_tenure_median": 28.0,
+ "tp_tenure_median": 17.0,
+ "fn_n": 323
+}

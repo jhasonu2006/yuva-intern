@@ -1,37 +1,24 @@
-# Data Science Tool Mastery Project
+# Final Data Science Capstone – Customer Churn Prediction (Yuva Intern, Task 6)
 
-A hands-on portfolio project demonstrating proficiency with the core Python data science stack:
-**NumPy, pandas, Matplotlib, Seaborn, SciPy and scikit-learn**, run in Jupyter Notebook.
+End-to-end machine learning project predicting telecom customer churn (TeleConnect India, simulated data, 7,000 customers).
 
-## Dataset
-Breast Cancer Wisconsin (Diagnostic) - 569 samples, 30 numeric features. It ships with
-scikit-learn (`sklearn.datasets.load_breast_cancer`), so no download is required.
+## Contents
+- `capstone.py` – full pipeline: data generation, cleaning, feature engineering, EDA, model training, evaluation, threshold optimisation, error analysis, charts
+- `teleconnect_churn_dataset.csv` – cleaned dataset
+- `metrics.json` – all results used in the report
+- `g1_eda_churn.png` … `g6_importance.png` – charts
+- `Task6_Capstone_Report.docx` – full project report
 
-## What is covered
-| Tool | What is demonstrated |
-|---|---|
-| NumPy | random arrays, percentiles, matrix maths, vectorised z-score |
-| pandas | inspection, missing/duplicate checks, groupby, qcut binning, crosstab |
-| Matplotlib / Seaborn | histogram + KDE, boxplot, correlation heatmap, scatter, confusion matrix, bar chart |
-| SciPy | Welch t-test, Pearson correlation |
-| scikit-learn | train/test split, pipelines, cross-validation, Logistic Regression, Random Forest, metrics |
-
-## How to run
-```bash
-pip install -r requirements.txt
-jupyter notebook Data_Science_Tool_Mastery.ipynb
-# or run the plain script:
-python tool_mastery.py
+## Run
+```
+pip install pandas numpy matplotlib scikit-learn
+python capstone.py
 ```
 
-## Files
-- `Data_Science_Tool_Mastery.ipynb` - main notebook
-- `tool_mastery.py` - same code as a script (saves charts to `figures/`)
-- `run_output.txt` - captured console output
-- `model_results.csv` - model comparison table
-- `figures/` - generated charts
+## Method
+Logistic Regression, Random Forest and Gradient Boosting compared with 5-fold stratified cross-validation; best model chosen by ROC-AUC; decision threshold tuned on training data for business net benefit; permutation importance and error analysis.
 
 ## Key results
-- Logistic Regression (scaled): 98.25% test accuracy, F1 0.986
-- Random Forest: 95.61% test accuracy, F1 0.966
-- Mean radius differs strongly between malignant and benign tumours (Welch t = 22.21, p < 0.001)
+- Churn rate 38.3%; test ROC-AUC about 0.83 (Logistic Regression)
+- Top drivers: contract type, tenure, internet service, support calls
+- Targeting by model risk is profitable; offering to everyone is not
